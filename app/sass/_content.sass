@@ -1,0 +1,119 @@
+.content
+
+    &__grid
+        display: grid
+        grid-template-columns: repeat(2,2fr)
+        grid-template-rows: 59rem 59rem 59rem
+        
+        
+        
+
+        @include breakpoint-down(small)
+            grid-template-columns: repeat(1,1fr)
+            grid-template-rows: 31rem 44rem 31rem 44rem 60rem 60rem 
+
+
+            
+
+    &__item
+        position: relative
+        width: 44rem
+        height: 59rem
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -25%)
+        text-align: left
+
+        @include breakpoint-down(small)
+            height: 44rem
+            width: auto
+            text-align: center
+
+        h2
+            font-family: 'Fraunces', sans-serif
+            font-weight: 900
+            font-size: 3.9rem
+            margin-top: 0
+            color: $veryDarkDesBlue
+
+            @include breakpoint-down(small)
+                font-size: 3.1rem
+           
+        p
+            line-height: 1.5
+            color: $darkGrayishBlue
+            font-size: 1.7rem
+            margin-bottom: 4.5rem
+            @include breakpoint-down(small)
+                margin-bottom: 4.2rem
+
+        a
+            font-family: 'Fraunces', sans-serif
+            font-size: 1.7rem
+            font-weight: 900
+            text-decoration: none
+            text-transform: uppercase
+            color: $veryDarkDesBlue
+            z-index: 1
+
+            &:hover
+                opacity: 1
+
+            &::after
+                content: ""
+                position: absolute
+                width: 14rem
+                height: 1rem
+                background-color: $yellow
+                border-radius: 50px
+                opacity: 0.4
+                z-index: -1
+                transition: all 200ms
+                transform: translate(-94%, 150%)
+
+            &:hover::after
+                opacity: 1    
+
+        .link_red::after
+                background-color: $softRed
+
+
+
+    &__image
+            background-repeat: no-repeat
+            background-size: cover
+            min-width: 44rem
+
+    .image
+
+        &__one
+            background-image: url('/images/desktop/image-transform.jpg')
+        &__two
+            background-image: url('/images/desktop/image-stand-out.jpg')
+            
+        &__three
+            background-image: url('/images/desktop/image-graphic-design.jpg')
+
+            h2
+                color: $darkDesCyan
+                font-size: 2.9rem
+            p
+                color: $darkModCyan
+                font-size: 1.6rem
+
+
+        &__four
+            background-image: url('/images/desktop/image-photography.jpg')
+
+            h2
+                color: $darkBlue
+                font-size: 2.9rem
+            p
+                color: $darkBlue
+                font-size: 1.6rem
+
+.inside-image
+    width: 33rem
+    height: 14rem
+    text-align: center
+    top: 75%
